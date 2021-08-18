@@ -1,0 +1,442 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\sltm-14\OneDrive\Documentos\FPGAs\MIPS-Computer_Architecture\MIPS\MIPS_Processor\tb
+vAdder32bits
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 P`cGVa[1YU92[SVf[eUJm0
+I5hX;mK@n]S:I_j6a6`I5i2
+VhbeHMJ9:9][[WIY?Ingef0
+!s105 Adder32bits_sv_unit
+S1
+Z2 dC:\Users\sltm-14\OneDrive\Documentos\FPGAs\MIPS-Computer_Architecture\MIPS\MIPS_Processor\tb
+w1628994056
+8../src/Adder32bits.sv
+F../src/Adder32bits.sv
+L0 9
+Z3 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z4 !s108 1629076487.553000
+Z5 !s107 MIPS_Processor_TB.sv|../src/MIPS_Processor.sv|../src/Adder32bits.sv|../src/ALU.sv|../src/ALUControl.sv|../src/ANDGate.sv|../src/Control.sv|../src/DataMemory.sv|../src/DecoderRegisterFile.sv|../src/Multiplexer2to1.sv|../src/MUXRegisterFile.sv|../src/OR_Gate.sv|../src/PC_Register.sv|../src/ProgramMemory.sv|../src/Register.sv|../src/RegisterFile.sv|../src/ShiftLeft2.sv|../src/SignExtend.sv|../src/Definitions.sv|
+Z6 !s90 -reportprogress|300|-f|files.f|
+!s101 -O0
+o-O0
+n@adder32bits
+vALU
+R1
+!i10b 1
+!s100 42OPe6A:hFnX`J?9J@6E@3
+IhI9f7[93EeNeUABDfc;e10
+VX?7JjznJ[`4e<^zaa=]DE2
+!s105 ALU_sv_unit
+S1
+R2
+w1629075552
+8../src/ALU.sv
+F../src/ALU.sv
+L0 12
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@a@l@u
+vALUControl
+R1
+!i10b 1
+!s100 =QiHA2EM8mV<M:bRh2WIk2
+IQgcPPg_kd=DDN`A_ALaQE3
+VYG3?]Rm0iHlPnI6^P<_K72
+!s105 ALUControl_sv_unit
+S1
+R2
+w1629075834
+8../src/ALUControl.sv
+F../src/ALUControl.sv
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@a@l@u@control
+vANDGate
+R1
+!i10b 1
+!s100 `AnNa_Jz@kg4FDV2mL;[D0
+IQ`XO3]2Bz]Hjzd_07EXE=2
+V@P6ZJzDP4U00DFc40UnH?0
+!s105 ANDGate_sv_unit
+S1
+R2
+w1628994132
+8../src/ANDGate.sv
+F../src/ANDGate.sv
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@a@n@d@gate
+vControl
+R1
+!i10b 1
+!s100 COLO4`S9D:zBLR_n2[e:]3
+IfzOZAAjEHmHO2YhX>K]l_3
+Vz:K>_dX<NB9mlKU@9>RGK2
+!s105 Control_sv_unit
+S1
+R2
+w1629076460
+8../src/Control.sv
+F../src/Control.sv
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@control
+vDataMemory
+R1
+!i10b 1
+!s100 88GcHOjj;jdHcVz0H>2Rg0
+I8i4KmSY<i3LOQlIZP<<?40
+V4L9lB_hUOgDh5240fH`j10
+!s105 DataMemory_sv_unit
+S1
+R2
+w1628990322
+8../src/DataMemory.sv
+F../src/DataMemory.sv
+L0 7
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@data@memory
+vDecoderRegisterFile
+R1
+!i10b 1
+!s100 A=RZWA6TN12hDmDA5;C[n1
+Il`_8@;V[C=ceW96H62zz90
+VAzJiE5G;z;;Z`IVeRHbi]2
+!s105 DecoderRegisterFile_sv_unit
+S1
+R2
+w1628990326
+8../src/DecoderRegisterFile.sv
+F../src/DecoderRegisterFile.sv
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@decoder@register@file
+vDefinitions
+R1
+!i10b 1
+!s100 4odYJM`<V<UHaYgbU0dzF2
+IRH<HjLP`90AN:fm`c3c7z1
+V[F:E0UaWbTW1Sb3^TJBAD0
+!s105 Definitions_sv_unit
+S1
+R2
+w1628991220
+8../src/Definitions.sv
+F../src/Definitions.sv
+L0 13
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@definitions
+vMIPS_Processor
+R1
+!i10b 1
+!s100 9EMc0:F_M[^<dEclE6OhI2
+Iiel8]dP_mhnO^Qd[:2Y1O3
+V`oDbidz:QJ;EWUm;X5iWe2
+!s105 MIPS_Processor_sv_unit
+S1
+R2
+w1628994266
+8../src/MIPS_Processor.sv
+F../src/MIPS_Processor.sv
+L0 14
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@m@i@p@s_@processor
+vMIPS_Processor_TB
+R1
+!i10b 1
+!s100 [<O9n4T1JZ6JKGa>6`OER0
+Im2]V]T_ZK>J9CiH2@l5;K3
+VF;RK8<I_2l2fKA6oTTYc[0
+!s105 MIPS_Processor_TB_sv_unit
+S1
+R2
+w1628998061
+8MIPS_Processor_TB.sv
+FMIPS_Processor_TB.sv
+L0 9
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@m@i@p@s_@processor_@t@b
+vMultiplexer2to1
+R1
+!i10b 1
+!s100 8AemhNlk=SANh?M_m[=0c2
+INgJ7DN8?K5zSQf76d;?NI2
+VVK]UMc9_`U;kn>BU8WnV61
+!s105 Multiplexer2to1_sv_unit
+S1
+R2
+w1628990341
+8../src/Multiplexer2to1.sv
+F../src/Multiplexer2to1.sv
+L0 7
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@multiplexer2to1
+vMUXRegisterFile
+R1
+!i10b 1
+!s100 ;[Q6D]f[^A@Wke:03YRQA3
+IUE6VFQV9_@7jm1U]BBME01
+VFY5?DFN3TE7YHT48]kVZO0
+!s105 MUXRegisterFile_sv_unit
+S1
+R2
+w1628990350
+8../src/MUXRegisterFile.sv
+F../src/MUXRegisterFile.sv
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@m@u@x@register@file
+vOR_Gate
+R1
+!i10b 1
+!s100 P`abnC^jaZJThzzWSTIOn1
+IkdP:XnjYWkjUgZXze<6<Z1
+Vh;W_ZOYYN1KC[54H73NWk1
+!s105 OR_Gate_sv_unit
+S1
+R2
+w1628990534
+8../src/OR_Gate.sv
+F../src/OR_Gate.sv
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@o@r_@gate
+vPC_Register
+R1
+!i10b 1
+!s100 PaRASnV3YQje]DP^BN?K33
+Ii58BO<c>aa90LId`890?z0
+VB5UK_PJd9NGBl2jcLH=n;0
+!s105 PC_Register_sv_unit
+S1
+R2
+w1628998320
+8../src/PC_Register.sv
+F../src/PC_Register.sv
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@p@c_@register
+vProgramMemory
+R1
+!i10b 1
+!s100 dmSo]=d5K54CngPS;4nbz3
+IePcN`TV47nOnf@eI826a92
+VCC`gfbQneU65h7iiQf?k:2
+!s105 ProgramMemory_sv_unit
+S1
+R2
+w1629075018
+8../src/ProgramMemory.sv
+F../src/ProgramMemory.sv
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@program@memory
+vRegister
+R1
+!i10b 1
+!s100 >W8^=ELABKPDQo3fUBcXD2
+IH;ze`8JSdXmabP?HI=NKV1
+VN]]ezG>mP8JgS@Ef6HHJ?1
+!s105 Register_sv_unit
+S1
+R2
+w1628998520
+8../src/Register.sv
+F../src/Register.sv
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@register
+vRegisterFile
+R1
+!i10b 1
+!s100 m;HV0oG]aISR0VkAoJzFN1
+I]n3^zN_5J1X[P<?3lU^0h0
+VDzV61DNd[:PZ18Q2PBDDV0
+!s105 RegisterFile_sv_unit
+S1
+R2
+w1628998421
+8../src/RegisterFile.sv
+F../src/RegisterFile.sv
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@register@file
+vShiftLeft2
+R1
+!i10b 1
+!s100 V:ZnHeJWL3Oo`d;bi]=Y@3
+ITl@Cbk2BEQP]^b>zFohij3
+Vnb>Sakz<@KW@i;;^V8USl3
+!s105 ShiftLeft2_sv_unit
+S1
+R2
+w1628990634
+8../src/ShiftLeft2.sv
+F../src/ShiftLeft2.sv
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@shift@left2
+vSignExtend
+R1
+!i10b 1
+!s100 EHf7RXdjFZh_Z1DR4B;850
+IONWgdVA6OF9=_Re<IfA8C0
+V3c0EGMRjO^8AQ<D2Q;35d2
+!s105 SignExtend_sv_unit
+S1
+R2
+w1628990391
+8../src/SignExtend.sv
+F../src/SignExtend.sv
+L0 7
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@sign@extend
