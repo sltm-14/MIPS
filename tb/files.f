@@ -4,7 +4,7 @@
 ../src/ShiftLeft2.sv
 ../src/RegisterFile.sv
 ../src/Register.sv
-../src/ProgramMemory.sv
+../src/InstructionMemory.sv
 ../src/PC_Register.sv
 ../src/OR_Gate.sv
 ../src/MUXRegisterFile.sv

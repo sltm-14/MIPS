@@ -20,8 +20,8 @@ Z3 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z4 !s108 1629076487.553000
-Z5 !s107 MIPS_Processor_TB.sv|../src/MIPS_Processor.sv|../src/Adder32bits.sv|../src/ALU.sv|../src/ALUControl.sv|../src/ANDGate.sv|../src/Control.sv|../src/DataMemory.sv|../src/DecoderRegisterFile.sv|../src/Multiplexer2to1.sv|../src/MUXRegisterFile.sv|../src/OR_Gate.sv|../src/PC_Register.sv|../src/ProgramMemory.sv|../src/Register.sv|../src/RegisterFile.sv|../src/ShiftLeft2.sv|../src/SignExtend.sv|../src/Definitions.sv|
+Z4 !s108 1629258135.173000
+Z5 !s107 MIPS_Processor_TB.sv|../src/MIPS_Processor.sv|../src/Adder32bits.sv|../src/ALU.sv|../src/ALUControl.sv|../src/ANDGate.sv|../src/Control.sv|../src/DataMemory.sv|../src/DecoderRegisterFile.sv|../src/Multiplexer2to1.sv|../src/MUXRegisterFile.sv|../src/OR_Gate.sv|../src/PC_Register.sv|../src/InstructionMemory.sv|../src/Register.sv|../src/RegisterFile.sv|../src/ShiftLeft2.sv|../src/SignExtend.sv|../src/Definitions.sv|
 Z6 !s90 -reportprogress|300|-f|files.f|
 !s101 -O0
 o-O0
@@ -187,16 +187,39 @@ R6
 !s101 -O0
 o-O0
 n@definitions
+vInstructionMemory
+R1
+!i10b 1
+!s100 RbDnTA<J>h[Pfzm26`9H:0
+I<XGc0o4TlEZUjSjjal07L1
+V=^_Ibec0fiP]6@Eg75V^n2
+!s105 InstructionMemory_sv_unit
+S1
+R2
+w1629257626
+8../src/InstructionMemory.sv
+F../src/InstructionMemory.sv
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
+n@instruction@memory
 vMIPS_Processor
 R1
 !i10b 1
-!s100 9EMc0:F_M[^<dEclE6OhI2
-Iiel8]dP_mhnO^Qd[:2Y1O3
+!s100 l39[j06Mz78H9lo7i7Q8o3
+I?Q80n:g1ki0]D78VK?M=`2
 V`oDbidz:QJ;EWUm;X5iWe2
 !s105 MIPS_Processor_sv_unit
 S1
 R2
-w1628994266
+w1629257811
 8../src/MIPS_Processor.sv
 F../src/MIPS_Processor.sv
 L0 14
@@ -325,29 +348,6 @@ R6
 !s101 -O0
 o-O0
 n@p@c_@register
-vProgramMemory
-R1
-!i10b 1
-!s100 dmSo]=d5K54CngPS;4nbz3
-IePcN`TV47nOnf@eI826a92
-VCC`gfbQneU65h7iiQf?k:2
-!s105 ProgramMemory_sv_unit
-S1
-R2
-w1629075018
-8../src/ProgramMemory.sv
-F../src/ProgramMemory.sv
-L0 8
-R3
-r1
-!s85 0
-31
-R4
-R5
-R6
-!s101 -O0
-o-O0
-n@program@memory
 vRegister
 R1
 !i10b 1
