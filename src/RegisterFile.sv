@@ -57,20 +57,20 @@ ZeroRegister
 );
 
 
-	generate
-		for(i=1;i<32;i=i+1)begin:Registeri
-		Register
-		Register_i
-		(
-			.clk(clk),
-			.rst(rst),
+generate
+	for(i=1;i<32;i=i+1)begin:Registeri
+	Register
+	Register_i
+	(
+		.clk(clk),
+		.rst(rst),
 
-			.enable(SelectRegister_wire[i]&RegWrite),
-			.DataInput(WriteData),
-			.DataOutput(Intercnection_wire[((i+1)*N)-1:i*N])
-		);
-		end
-	endgenerate
+		.enable(SelectRegister_wire[i]&RegWrite),
+		.DataInput(WriteData),
+		.DataOutput(Intercnection_wire[((i+1)*N)-1:i*N])
+	);
+	end
+endgenerate
 
 
 MUXRegisterFile
