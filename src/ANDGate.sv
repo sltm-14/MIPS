@@ -11,7 +11,6 @@ module ANDGate
 	output C
 );
 
-
 	assign C = A & B;
 
 endmodule
