@@ -57,19 +57,6 @@ ZeroRegister
 );
 
 
-//Register
-//atRegister
-//(
-//	.clk(clk),
-//	.rst(rst),
-//	.enable(SelectRegister_wire[1]&RegWrite),
-//	.DataInput(WriteData),
-//	.DataOutput(Reverse)
-//);
-
-//assign Intercnection_wire[(2*N)-1:N] = Reverse;
-
-//always begin
 	generate
 		for(i=1;i<32;i=i+1)begin:Registeri
 		Register
@@ -84,7 +71,7 @@ ZeroRegister
 		);
 		end
 	endgenerate
-//end
+
 
 MUXRegisterFile
 #(
