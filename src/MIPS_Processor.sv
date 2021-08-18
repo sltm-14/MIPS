@@ -96,15 +96,15 @@ always@(posedge clk)
 	$fdisplay(ALUStatus, "%h", w_ALUResult);
 `endif
 
-ProgramMemory
+InstructionMemory
 #(
 	.MEMORY_DEPTH(MEMORY_DEPTH)
 )
 ROMProgramMemory
 (
-	.Address(w_PC),
+	.i_Address(w_PC),
 
-	.Instruction(w_Instruction)
+	.o_Instruction(w_Instruction)
 );
 
 Adder32bits
@@ -253,7 +253,7 @@ ArithmeticLogicUnit
 	.ALUOperation(w_ALUOperation),
 	.A(w_ReadData1),
 	.B(w_ReadData2OrInmmediate),
-	
+
 	.Zero(w_Zero),
 	.ALUResult(w_ALUResult)
 );

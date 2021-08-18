@@ -8,14 +8,14 @@
 module RegisterFile
 #(
 	parameter N=32
-)
-(
+)(
 	input clk,
 	input rst,
+
 	input RegWrite,
-	input [4:0] WriteRegister,
-	input [4:0] ReadRegister1,
-	input [4:0] ReadRegister2,
+	input [4:0]  ReadRegister1,
+	input [4:0]  ReadRegister2,
+	input [4:0]  WriteRegister,
 	input [31:0] WriteData,
 
 	output [31:0] ReadData1,
@@ -24,8 +24,10 @@ module RegisterFile
 );
 
 genvar i;
+
 wire [32*N-1:0]Intercnection_wire;
 wire [31:0] SelectRegister_wire;
+
 `ifdef MONITORS
 reg [31:0]RegiterArray[0:31];
 
@@ -75,6 +77,7 @@ ZeroRegister
 		(
 			.clk(clk),
 			.rst(rst),
+
 			.enable(SelectRegister_wire[i]&RegWrite),
 			.DataInput(WriteData),
 			.DataOutput(Intercnection_wire[((i+1)*N)-1:i*N])
@@ -100,7 +103,7 @@ MUXRegister1
 	.Data_6(Intercnection_wire[7*N-1:6*N]),
 	.Data_7(Intercnection_wire[8*N-1:7*N]),
 	.Data_8(Intercnection_wire[9*N-1:8*N]),
-   .Data_9(Intercnection_wire[10*N-1:9*N]),
+    .Data_9(Intercnection_wire[10*N-1:9*N]),
 	.Data_10(Intercnection_wire[11*N-1:10*N]),
 	.Data_11(Intercnection_wire[12*N-1:11*N]),
 	.Data_12(Intercnection_wire[13*N-1:12*N]),
@@ -132,11 +135,10 @@ MUXRegisterFile
 #(
 	.N(32)
 )
-MUXRegister2
-(
+MUXRegister2(
 	.Selector(ReadRegister2),
 
-		.Data_0(Intercnection_wire[1*N-1:0*N]),
+	.Data_0(Intercnection_wire[1*N-1:0*N]),
 	.Data_1(Intercnection_wire[2*N-1:1*N]),
 	.Data_2(Intercnection_wire[3*N-1:2*N]),
 	.Data_3(Intercnection_wire[4*N-1:3*N]),
@@ -145,7 +147,7 @@ MUXRegister2
 	.Data_6(Intercnection_wire[7*N-1:6*N]),
 	.Data_7(Intercnection_wire[8*N-1:7*N]),
 	.Data_8(Intercnection_wire[9*N-1:8*N]),
-   .Data_9(Intercnection_wire[10*N-1:9*N]),
+	.Data_9(Intercnection_wire[10*N-1:9*N]),
 	.Data_10(Intercnection_wire[11*N-1:10*N]),
 	.Data_11(Intercnection_wire[12*N-1:11*N]),
 	.Data_12(Intercnection_wire[13*N-1:12*N]),
@@ -171,4 +173,5 @@ MUXRegister2
 
 	.MUX_Output(ReadData2)
 );
+
 endmodule
