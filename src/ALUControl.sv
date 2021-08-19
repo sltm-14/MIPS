@@ -15,15 +15,16 @@ module ALUControl
 );
 
 localparam R_Type_AND    = 9'b111_100100;
-localparam R_Type_OR    = 9'b111_100101;
+localparam R_Type_OR     = 9'b111_100101;
 localparam R_Type_NOR    = 9'b111_100111;
-
 localparam R_Type_ADD    = 9'b111_100000;
+
 localparam I_Type_ADDI   = 9'b100_xxxxxx;
 localparam I_Type_ORI    = 9'b101_xxxxxx;
 localparam BEQ_AND_BNE   = 9'b001_xxxxxx;
 
-reg [3:0] ALUControlValues;
+reg  [3:0] ALUControlValues;
+
 wire [8:0] Selector;
 
 assign Selector = {ALUOp,ALUFunction};
@@ -40,7 +41,6 @@ always@(Selector)begin
 		default: ALUControlValues = 4'b1001;
 	endcase
 end
-
 
 assign ALUOperation = ALUControlValues;
 

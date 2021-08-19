@@ -5,23 +5,24 @@
 ******************************************************************/
 module DecoderRegisterFile
 (
-	input [4:0] WriteRegister,
+	input  [4:0]  WriteRegister,
 	output [31:0] SelectRegister
 );
+
 reg [31:0] SelectRegister_reg;
 
 always@(*)begin
 	case(WriteRegister)
 		0:   SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0000_0001;
-		1:	  SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0000_0010;
-		2:	  SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0000_0100;
-		3:	  SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0000_1000;
-		4:	  SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0001_0000;
-		5:	  SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0010_0000;
-		6:	  SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0100_0000;
-		7:	  SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_1000_0000;
-		8:	  SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0001_0000_0000;
-		9:	  SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0010_0000_0000;
+		1:	 SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0000_0010;
+		2:	 SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0000_0100;
+		3:	 SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0000_1000;
+		4:	 SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0001_0000;
+		5:	 SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0010_0000;
+		6:	 SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_0100_0000;
+		7:	 SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0000_1000_0000;
+		8:	 SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0001_0000_0000;
+		9:	 SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0010_0000_0000;
 		10:  SelectRegister_reg = 32'b0000_0000_0000_0000_0000_0100_0000_0000;
 		11:  SelectRegister_reg = 32'b0000_0000_0000_0000_0000_1000_0000_0000;
 		12:  SelectRegister_reg = 32'b0000_0000_0000_0000_0001_0000_0000_0000;

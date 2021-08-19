@@ -8,9 +8,9 @@ entity RegisterFile is
         clk             : in     vl_logic;
         rst             : in     vl_logic;
         RegWrite        : in     vl_logic;
-        WriteRegister   : in     vl_logic_vector(4 downto 0);
         ReadRegister1   : in     vl_logic_vector(4 downto 0);
         ReadRegister2   : in     vl_logic_vector(4 downto 0);
+        WriteRegister   : in     vl_logic_vector(4 downto 0);
         WriteData       : in     vl_logic_vector(31 downto 0);
         ReadData1       : out    vl_logic_vector(31 downto 0);
         ReadData2       : out    vl_logic_vector(31 downto 0)

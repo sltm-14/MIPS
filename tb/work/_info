@@ -20,7 +20,7 @@ Z3 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z4 !s108 1629258135.173000
+Z4 !s108 1629327823.615000
 Z5 !s107 MIPS_Processor_TB.sv|../src/MIPS_Processor.sv|../src/Adder32bits.sv|../src/ALU.sv|../src/ALUControl.sv|../src/ANDGate.sv|../src/Control.sv|../src/DataMemory.sv|../src/DecoderRegisterFile.sv|../src/Multiplexer2to1.sv|../src/MUXRegisterFile.sv|../src/OR_Gate.sv|../src/PC_Register.sv|../src/InstructionMemory.sv|../src/Register.sv|../src/RegisterFile.sv|../src/ShiftLeft2.sv|../src/SignExtend.sv|../src/Definitions.sv|
 Z6 !s90 -reportprogress|300|-f|files.f|
 !s101 -O0
@@ -75,13 +75,13 @@ n@a@l@u@control
 vANDGate
 R1
 !i10b 1
-!s100 `AnNa_Jz@kg4FDV2mL;[D0
-IQ`XO3]2Bz]Hjzd_07EXE=2
+!s100 6lbNWml]OHIG31AVV7zf32
+I`ikHzFj2>R64gllM:agi12
 V@P6ZJzDP4U00DFc40UnH?0
 !s105 ANDGate_sv_unit
 S1
 R2
-w1628994132
+w1629300911
 8../src/ANDGate.sv
 F../src/ANDGate.sv
 L0 6
@@ -98,13 +98,13 @@ n@a@n@d@gate
 vControl
 R1
 !i10b 1
-!s100 COLO4`S9D:zBLR_n2[e:]3
-IfzOZAAjEHmHO2YhX>K]l_3
+!s100 <beCgdUT9Ml@WzY6F]H4m3
+I_jBLCFGORbhiL[U0ALcH<1
 Vz:K>_dX<NB9mlKU@9>RGK2
 !s105 Control_sv_unit
 S1
 R2
-w1629076460
+w1629309072
 8../src/Control.sv
 F../src/Control.sv
 L0 8
@@ -144,13 +144,13 @@ n@data@memory
 vDecoderRegisterFile
 R1
 !i10b 1
-!s100 A=RZWA6TN12hDmDA5;C[n1
-Il`_8@;V[C=ceW96H62zz90
+!s100 Vn3iW54I0Jhm11FA2QOHU3
+IMhlT2VaP0I]d4EmXSiBnC2
 VAzJiE5G;z;;Z`IVeRHbi]2
 !s105 DecoderRegisterFile_sv_unit
 S1
 R2
-w1628990326
+w1629310212
 8../src/DecoderRegisterFile.sv
 F../src/DecoderRegisterFile.sv
 L0 6
@@ -167,13 +167,13 @@ n@decoder@register@file
 vDefinitions
 R1
 !i10b 1
-!s100 4odYJM`<V<UHaYgbU0dzF2
-IRH<HjLP`90AN:fm`c3c7z1
+!s100 ]1b=j6MbNJzDKcFf[ffGW0
+I2B4:RkaSOO]cKVNRC0<CF2
 V[F:E0UaWbTW1Sb3^TJBAD0
 !s105 Definitions_sv_unit
 S1
 R2
-w1628991220
+w1629301866
 8../src/Definitions.sv
 F../src/Definitions.sv
 L0 13
@@ -213,13 +213,13 @@ n@instruction@memory
 vMIPS_Processor
 R1
 !i10b 1
-!s100 l39[j06Mz78H9lo7i7Q8o3
-I?Q80n:g1ki0]D78VK?M=`2
+!s100 Y4@JRaSK^bzWMB8Nm24`m3
+I_X[:bWC;dI=YE60g8VV=O2
 V`oDbidz:QJ;EWUm;X5iWe2
 !s105 MIPS_Processor_sv_unit
 S1
 R2
-w1629257811
+w1629310848
 8../src/MIPS_Processor.sv
 F../src/MIPS_Processor.sv
 L0 14
@@ -259,13 +259,13 @@ n@m@i@p@s_@processor_@t@b
 vMultiplexer2to1
 R1
 !i10b 1
-!s100 8AemhNlk=SANh?M_m[=0c2
-INgJ7DN8?K5zSQf76d;?NI2
+!s100 zddY;Q0zC[DT:1i6UzJ8[0
+IDo??@a_SlR7GfZ17G<a^60
 VVK]UMc9_`U;kn>BU8WnV61
 !s105 Multiplexer2to1_sv_unit
 S1
 R2
-w1628990341
+w1629308600
 8../src/Multiplexer2to1.sv
 F../src/Multiplexer2to1.sv
 L0 7
@@ -374,16 +374,16 @@ n@register
 vRegisterFile
 R1
 !i10b 1
-!s100 m;HV0oG]aISR0VkAoJzFN1
-I]n3^zN_5J1X[P<?3lU^0h0
-VDzV61DNd[:PZ18Q2PBDDV0
+!s100 DCB@=N=]Gi?=:ON[=?;YB1
+IeV;A8dA0N9mmE:WdO=`0[3
+V0mNif41MDM0B06NnU^K1P0
 !s105 RegisterFile_sv_unit
 S1
 R2
-w1628998421
+w1629317439
 8../src/RegisterFile.sv
 F../src/RegisterFile.sv
-L0 8
+L0 16
 R3
 r1
 !s85 0

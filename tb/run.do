@@ -6,4 +6,4 @@ set NoQuitOnFinish 1
 vsim -voptargs=+acc work.MIPS_Processor_TB
 do wave.do
 
-run 1000ps
+run 120ps

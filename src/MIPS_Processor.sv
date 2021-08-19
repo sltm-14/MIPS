@@ -59,10 +59,61 @@ integer ALUStatus;
 
 
 //******************************************************************/
-//******************************************************************/
-//******************************************************************/
-//******************************************************************/
-//******************************************************************/
+
+
+
+/*************************************************************************/
+/*                              FETCH                                    */
+/*************************************************************************/
+
+PC_Register
+ProgramCounter (
+	.clk(clk),
+	.rst(rst),
+	.NewPC(w_MUX_PC),
+
+	.PCValue(w_PC)
+);
+
+
+Adder32bits
+PC_Plus_4
+(
+	.Data0(w_PC),
+	.Data1(4),
+
+	.Result(w_PC_4)
+);
+
+
+InstructionMemory
+#(
+	.MEMORY_DEPTH(MEMORY_DEPTH)
+)
+ROMProgramMemory
+(
+	.i_Address(w_PC),
+
+	.o_Instruction(w_Instruction)
+);
+
+/*************************************************************************/
+
+`ifdef MONITORS
+	initial
+		ALUStatus = $fopen("ALUResult.dat");
+
+	always@(posedge clk)
+	  $display("PC value %d ALU result %00h",w_PC,w_ALUResult );
+
+	always@(posedge clk)
+		$fdisplay(ALUStatus, "%h", w_ALUResult);
+`endif
+
+/*************************************************************************/
+/*                              DECODE                                   */
+/*************************************************************************/
+
 Control
 ControlUnit
 (
@@ -76,45 +127,48 @@ ControlUnit
 	.RegWrite(w_RegWrite)
 );
 
-PC_Register
-ProgramCounter (
+
+/* if(!Selector) MUX_Output = MUX_Data0 */
+Multiplexer2to1
+#(
+	.NBits(5)
+)
+MUX_ForRTypeAndIType
+(
+	.Selector(w_RegDst),              // R_Type
+	.MUX_Data0(w_Instruction[20:16]), // rt
+	.MUX_Data1(w_Instruction[15:11]), // rd
+
+	.MUX_Output(w_WriteRegister)      // R_Type ? rd : rt
+);
+
+
+RegisterFile
+Register_File
+(
 	.clk(clk),
 	.rst(rst),
-	.NewPC(w_MUX_PC),
+	.RegWrite(w_RegWrite),
+	.ReadRegister1(w_Instruction[25:21]), // rs
+	.ReadRegister2(w_Instruction[20:16]), // rt
+	.WriteRegister(w_WriteRegister),      // R_Type ? rd : rt
+	.WriteData(w_ALUResult),
 
-	.PCValue(w_PC)
+	.ReadData1(w_ReadData1),
+	.ReadData2(w_ReadData2)
+
 );
 
-`ifdef MONITORS
-initial
-	ALUStatus = $fopen("ALUResult.dat");
 
-always@(posedge clk)
-  $display("PC value %d ALU result %00h",w_PC,w_ALUResult );
-
-always@(posedge clk)
-	$fdisplay(ALUStatus, "%h", w_ALUResult);
-`endif
-
-InstructionMemory
-#(
-	.MEMORY_DEPTH(MEMORY_DEPTH)
-)
-ROMProgramMemory
+SignExtend
+SignExtendForConstants
 (
-	.i_Address(w_PC),
+	.DataInput(w_Instruction[15:0]),
 
-	.o_Instruction(w_Instruction)
+	.SignExtendOutput(w_InmmediateExtend)
 );
 
-Adder32bits
-PC_Puls_4
-(
-	.Data0(w_PC),
-	.Data1(4),
-
-	.Result(w_PC_4)
-);
+/*************************************************************************/
 
 ShiftLeft2
 Shifter
@@ -175,51 +229,6 @@ MUX_PC
 
 );
 
-
-//******************************************************************/
-//******************************************************************/
-//******************************************************************/
-//******************************************************************/
-//******************************************************************/
-Multiplexer2to1
-#(
-	.NBits(5)
-)
-MUX_ForRTypeAndIType
-(
-	.Selector(w_RegDst),
-	.MUX_Data0(w_Instruction[20:16]),
-	.MUX_Data1(w_Instruction[15:11]),
-
-	.MUX_Output(w_WriteRegister)
-
-);
-
-
-
-RegisterFile
-Register_File
-(
-	.clk(clk),
-	.rst(rst),
-	.RegWrite(w_RegWrite),
-	.WriteRegister(w_WriteRegister),
-	.ReadRegister1(w_Instruction[25:21]),
-	.ReadRegister2(w_Instruction[20:16]),
-	.WriteData(w_ALUResult),
-
-	.ReadData1(w_ReadData1),
-	.ReadData2(w_ReadData2)
-
-);
-
-SignExtend
-SignExtendForConstants
-(
-	.DataInput(w_Instruction[15:0]),
-
-	.SignExtendOutput(w_InmmediateExtend)
-);
 
 Multiplexer2to1
 #(

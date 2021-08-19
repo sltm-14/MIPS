@@ -18,10 +18,10 @@ module Multiplexer2to1
 );
 
 	always@(Selector,MUX_Data1,MUX_Data0) begin
-		if(Selector)
-			MUX_Output = MUX_Data1;
-		else
+		if(!Selector)
 			MUX_Output = MUX_Data0;
+		else
+			MUX_Output = MUX_Data1;
 	end
 
 endmodule
